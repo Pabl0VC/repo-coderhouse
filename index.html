@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 10 GITHUB</title>
+    <title>Clase 10 GiTHub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!--  GitHub lo compra microsoft en 2008, lo que trajo muchas mejoras para la plataforma -->
-<!-- Los creadores de GitHub no son los que crearon GIT -->
+<!-- Los creadores de GitHub no son los creadores de GIT -->
 <!-- Existen otras plataformas Bitbucket, por ejemplo. Todas usan las mismas logicas de GIT, por que lo que no es dificil pasar por distintas plataformas -->
 
-<!-- Formas de crear Ramas  -->
-<!-- 1.- git branch ana-rama (solo me crea la rama pero no me envia a esa rama para trabajar en ella)-->
-<!-- 2.- git checkout -b rama-ana (crea la rama y me la traslada a esa rama nueva) -->
-<!-- para pasarme a la rama principal en este caso llamada main. debemos -->
+<!-- Recordatorio GIT:
+    git init: para iniciar Git 
+    git status: para chequear el estado en que se encuentran los archivos
+    git add . : para agregar archivos o agregar cambios que hicimos a Git
+    git commit -m  "agregar algun mensaje representativo para commit"
 
-<!-- NOTA: recordar que luego de realizar modificaciones en proyecto debemos subir estos cambios, hacemos git add luego git commit  -->
+    git log: para ver el historial de las versiones
+    git show: para ver los ultimos cambios que se hicieron
+    letra q: para salir del estado END
+-->
+
+<!-- RAMAS -->
+    <!-- al hacer git init Git se crea una rama princial que normalmente es llamada "main" o "master". -->
+    <!-- Cada desarrollador debe tener su propia rama para que trabajen de manera independiente y evitar muchos conflictos en el codigo.cuando cada programador termina su tarea existe una persona encargada de "merchear (aplicar merge)" a la rama principal todos los cambios.   -->
+    <!--  Los merge pueden general conflictos ya que cada programador puede haber escrito codigo en las mismas lineas que otro programador, por lo que una persona encargada debe decir con cual cambios se va a quedar y va a añadir a la rama principal-->
+    
+
+    <!-- Formas de crear Ramas  -->
+    <!-- 1.- git branch ana-rama: solo me crea la rama pero no me envia a esa rama para trabajar en ella (me mantengo en la rama principal).
+        git checkout -b rama ana: con esto, nos trasladamos a la rama de ana y podemos comenzar a trabajar tranquilamente sin tocar la rama principal.
+        git checkout main: es para entrar a la rama principal y trabajar en esta. -->
+        
+    <!-- 2.- git checkout -b rama-ana: esta es más recomendable porque crea la rama y me traslada a esa rama nueva) -->
+
+    <!-- NOTA: "branch" es igual a decir "-b" -->
+    <!-- NOTA: recordar que luego de realizar modificaciones en nuestra rama debemos subir estos cambios, hacemos git add luego git commit  -->
+
+    <!-- git branch -l: para comprobar las ramas que estan en el proyecto y en que rama estamos posicionados
+        git branch --list: es exactamente lo mismo a lo anterior-->
+
+<!-- UNA persona de todo el grupo de trabajo es el encargado de merchear para traer a la rama principal todos los cambios realizados por el equipo de programadores -->
+    <!-- git merge rama-ana: es para traer los cambios que realizó Ana en su rama a la rama principal -->
+
+<!-- Al traer los cambios que realizó Ana a la rama principal se pueden detectar conflicto con el codigo de otro desarrollador. Entonces, el encargado de realizar el merge es quien debe decidir con que codigo se queda. Es normal que existan los conflictos.
+En la realidad lo que hacen las empresas es que cada desarrollador trabaja en diferentes tareas para minimizar los conflictos -->
+
+
+
+
 
 
 
